@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أكاديمية مهارات | دورات وورشات</title>
+<meta name="description" content="دورات وورشات قصيرة بمدربات من مجتمعك. سجّلي مكانك وتأكدي عبر واتساب.">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;700&family=Readex+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F6F3;--card:#FFFFFF;--ink:#16301F;--acc:#2D6A4F;--acc2:#B7791F;--line:#CFE0D5;--mut:#5B7263;--soft:#E0EFE5;--err:#B3392F;--fd:'Noto Kufi Arabic',serif;--fb:'Readex Pro',sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink);line-height:1.75}
+button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.hero{background:var(--soft);padding:40px 0 34px;border-bottom:2px solid var(--line)}
+.hero .e{font-size:2.6rem}
+.hero h1{font-family:var(--fd);font-size:clamp(2rem,8vw,3.2rem);line-height:1.25;color:var(--acc)}
+.hero p{max-width:40ch;color:var(--mut);margin-top:8px;font-size:1.05rem}
+h2{font-family:var(--fd);font-size:1.5rem;color:var(--acc);margin:28px 0 12px}
+.svc{display:grid;gap:10px}
+.sv{display:grid;grid-template-columns:54px 1fr auto;gap:12px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;text-align:start;width:100%;transition:border-color .2s}
+.sv:hover{border-color:var(--acc)}
+.sv[aria-pressed=true]{border-color:var(--acc);background:var(--soft);box-shadow:inset 0 0 0 1.5px var(--acc)}
+.sv .ic{font-size:2rem;text-align:center}.sv b{display:block;font-family:var(--fd);font-size:1.12rem;line-height:1.35}.sv small{color:var(--mut);display:block;line-height:1.5}
+.sv .pr{font-weight:700;color:var(--acc2);white-space:nowrap}
+.box{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:16px}
+.days,.slots{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}.days::-webkit-scrollbar,.slots::-webkit-scrollbar{display:none}
+.slots{flex-wrap:wrap;overflow:visible}
+.day{flex:none;min-width:62px;padding:8px 6px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);text-align:center;line-height:1.35}
+.day small{display:block;color:var(--mut);font-size:.8rem}.day b{font-size:1.15rem}
+.day[aria-pressed=true],.slot[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}.day[aria-pressed=true] small{color:#fff}
+.slot{padding:7px 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);font-weight:500}
+.slot:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.f{display:grid;gap:3px;margin-bottom:12px}
+.f input,.f select,.f textarea{width:100%;padding:11px 14px;border-radius:12px;border:1.5px solid var(--line);background:#fff}
+.btn{display:inline-flex;justify-content:center;padding:12px 26px;border-radius:99px;background:var(--acc);color:#fff;font-weight:700;width:100%;text-decoration:none}
+.btn:hover{filter:brightness(.92)}.btn.wa{background:#1FA855}.btn.g{background:transparent;color:var(--acc);border:1.5px solid var(--acc)}.btn.s{width:auto;padding:5px 14px;font-size:.88rem}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.sum{background:var(--soft);border-radius:12px;padding:10px 14px;margin:10px 0;font-weight:500}
+.msg{padding:10px 14px;border-radius:12px;background:#FBE0DD;color:var(--err);margin-bottom:10px}
+.done{text-align:center;padding:12px 0}.done .no{font-family:var(--fd);font-size:1.5rem;letter-spacing:.08em;direction:ltr;background:var(--soft);display:inline-block;padding:6px 18px;border-radius:12px;margin:10px 0}
+.my{margin-top:28px}.myi{display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:8px;font-size:.95rem}
+.det{font-size:.93rem;color:var(--mut)}
+footer{border-top:2px solid var(--line);margin-top:36px;padding:20px 0 34px;color:var(--mut);font-size:.9rem;text-align:center}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap"><div class="e" aria-hidden="true">🎓</div><h1>تعلّمي مهارة جديدة</h1><p>دورات وورشات قصيرة بمدربات من مجتمعك. سجّلي مكانك وتأكدي عبر واتساب.</p></div></header>
+<main class="wrap">
+  <h2 id="h-svc">الدورات المتاحة</h2>
+  <div class="svc" id="svc"></div>
+  <div id="step2"></div>
+  <div class="my" id="my"></div>
+</main>
+<footer><div class="wrap">أكاديمية مهارات — مواعيد وأسعار الدورات تجريبية، والتأكيد النهائي عبر واتساب.</div></footer>
+<script>
+const CFG={"mode": "enroll", "key": "courses", "prefix": "RG", "name": "أكاديمية مهارات", "emoji": "🎓", "cta": "سجّليني وأرسلي على واتساب", "wa": "970599000000", "sheets": "", "open": 10, "close": 18, "closed": [5], "items": [{"e": "🧵", "n": "أساسيات التطريز الفلسطيني", "d": "غرزة الصليب والنقوش، مع قطعة تنفذينها بنفسك.", "price": "150 ₪", "meta": [["المدة", "8 جلسات"], ["الموعد", "يبدأ أول الشهر القادم"], ["المقاعد", "12 مقعداً"], ["المكان", "حضوري"]]}, {"e": "📣", "n": "التسويق عبر السوشال ميديا", "d": "خطة محتوى وصور وإعلانات صغيرة لمشروعك.", "price": "200 ₪", "meta": [["المدة", "6 جلسات"], ["الموعد", "مساء الثلاثاء والخميس"], ["المقاعد", "15 مقعداً"], ["المكان", "أونلاين"]]}, {"e": "💻", "n": "مهارات الحاسوب والأوفيس", "d": "وورد وإكسل وبوربوينت من الصفر.", "price": "120 ₪", "meta": [["المدة", "10 جلسات"], ["الموعد", "صباحاً"], ["المقاعد", "10 مقاعد"], ["المكان", "حضوري"]]}, {"e": "🗣️", "n": "اللغة الإنجليزية للمحادثة", "d": "محادثة يومية وعرض الذات والمقابلات.", "price": "140 ₪", "meta": [["المدة", "12 جلسة"], ["الموعد", "مساء الأحد والأربعاء"], ["المقاعد", "12 مقعداً"], ["المكان", "أونلاين"]]}, {"e": "📊", "n": "كتابة المقترحات والمشاريع", "d": "من الفكرة إلى مقترح كامل بميزانية وجدول زمني.", "price": "160 ₪", "meta": [["المدة", "5 جلسات"], ["الموعد", "نهاية الأسبوع"], ["المقاعد", "15 مقعداً"], ["المكان", "حضوري وأونلاين"]]}, {"e": "🧁", "n": "ورشة حلويات منزلية للبيع", "d": "وصفات وتسعير وتغليف لمشروع صغير.", "price": "90 ₪", "meta": [["المدة", "ورشة يوم واحد"], ["الموعد", "السبت"], ["المقاعد", "8 مقاعد"], ["المكان", "حضوري"]]}]};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const lsGet=(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}};
+const lsSet=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+const K=CFG.key, ITEMS=CFG.items, book=CFG.mode==='book';
+let sel=null, day=null, slot=null;
+const DN=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+function days(){const out=[],t=new Date();t.setHours(0,0,0,0);for(let i=0;out.length<12&&i<30;i++){const d=new Date(t);d.setDate(t.getDate()+i);if(!CFG.closed.includes(d.getDay()))out.push(d)}return out}
+function slotsFor(d){const s=[];for(let m=CFG.open*60;m+30<=CFG.close*60;m+=30)s.push(String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0'));
+  const now=new Date(),isToday=iso(d)===iso(now);
+  return s.filter(x=>!isToday||(+x.slice(0,2)*60+ +x.slice(3))>now.getHours()*60+now.getMinutes()+30)}
+const takenKey=(d,t)=>iso(d)+' '+t;
+function drawList(){
+  $('#svc').innerHTML=ITEMS.map((s,i)=>`<button class="sv" data-i="${i}" aria-pressed="${sel===i}"><span class="ic" aria-hidden="true">${s.e}</span><span><b>${esc(s.n)}</b><small>${esc(s.d)}</small><small>${s.meta.map(m=>esc(m[0])+': '+esc(m[1])).join(' · ')}</small></span><span class="pr">${esc(s.price)}</span></button>`).join('');
+}
+$('#svc').onclick=e=>{const b=e.target.closest('[data-i]');if(!b)return;sel=+b.dataset.i;day=null;slot=null;drawList();drawStep2();$('#step2').scrollIntoView({behavior:'smooth',block:'start'})};
+function drawStep2(){
+  if(sel===null){$('#step2').innerHTML='';return}
+  const s=ITEMS[sel];
+  let h='';
+  if(book){
+    const taken=lsGet(K+'_taken',[]);
+    h+=`<h2>اختاري اليوم</h2><div class="days" id="days" role="group" aria-label="الأيام">${days().map(d=>`<button class="day" data-d="${iso(d)}" aria-pressed="${day===iso(d)}"><small>${DN[d.getDay()]}</small><b>${d.getDate()}</b><small>${d.getMonth()+1}/${d.getFullYear()%100}</small></button>`).join('')}</div>`;
+    if(day){const dd=new Date(day+'T00:00:00');h+=`<h2>اختاري الوقت</h2><div class="slots" id="slots" role="group" aria-label="الأوقات">${slotsFor(dd).map(t=>`<button class="slot" data-t="${t}" aria-pressed="${slot===t}" ${taken.includes(takenKey(dd,t))?'disabled':''}>${t}</button>`).join('')||'<p class="det">لا توجد أوقات متاحة اليوم. جرّبي يوماً آخر.</p>'}</div>`}
+  }
+  if(!book||(day&&slot)){
+    const saved=lsGet(K+'_cust',{});
+    h+=`<h2>بياناتك</h2><form class="box" id="fm" novalidate><div class="sum">${s.e} ${esc(s.n)} — ${esc(s.price)}${book?`<br>${day} الساعة ${slot}`:''}</div>
+    <div class="f"><label for="nm">الاسم</label><input id="nm" required value="${esc(saved.name||'')}" autocomplete="name"></div>
+    <div class="f"><label for="ph">رقم الجوال</label><input id="ph" type="tel" inputmode="tel" required value="${esc(saved.phone||'')}" autocomplete="tel" placeholder="059xxxxxxx"></div>
+    ${book?'':`<div class="f"><label for="ed">المؤهل أو المستوى الحالي</label><select id="ed"><option>مبتدئة</option><option>لدي خبرة بسيطة</option><option>متقدمة</option></select></div>`}
+    <div class="f"><label for="nt">ملاحظات (اختياري)</label><textarea id="nt" rows="2"></textarea></div><div id="er"></div>
+    <button class="btn wa" type="submit">${CFG.cta}</button></form>`;
+  }
+  $('#step2').innerHTML=h;
+  const dv=$('#days');if(dv)dv.onclick=e=>{const b=e.target.closest('[data-d]');if(b){day=b.dataset.d;slot=null;drawStep2()}};
+  const sl=$('#slots');if(sl)sl.onclick=e=>{const b=e.target.closest('[data-t]');if(b&&!b.disabled){slot=b.dataset.t;drawStep2();$('#fm').scrollIntoView({behavior:'smooth',block:'start'})}};
+  const fm=$('#fm');if(fm)fm.onsubmit=submit;
+}
+function code(){const d=new Date();return CFG.prefix+'-'+String(d.getFullYear()).slice(2)+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'-'+Math.floor(1000+Math.random()*9000)}
+function submit(e){
+  e.preventDefault();
+  const name=$('#nm').value.trim(),phone=$('#ph').value.trim();
+  if(!name||!/^[0-9+\s-]{9,15}$/.test(phone)){$('#er').innerHTML='<div class="msg">اكتبي الاسم ورقم جوال صحيح.</div>';return}
+  const s=ITEMS[sel],no=code(),note=$('#nt').value.trim(),lvl=!book&&$('#ed')?$('#ed').value:'';
+  lsSet(K+'_cust',{name,phone});
+  let text=`${book?'طلب حجز موعد':'تسجيل جديد'} — ${CFG.name}\nالرقم: ${no}\n\nالاسم: ${name}\nالجوال: ${phone}\n${book?'الخدمة':'الدورة'}: ${s.n} (${s.price})`;
+  if(book)text+=`\nالموعد: ${day} الساعة ${slot}`;else{text+=`\nالمستوى: ${lvl}`;s.meta.forEach(m=>text+=`\n${m[0]}: ${m[1]}`)}
+  if(note)text+=`\nملاحظات: ${note}`;
+  const rec={no,date:new Date().toISOString(),item:s.n,name,phone,when:book?`${day} ${slot}`:'',text};
+  const my=lsGet(K+'_my',[]);my.unshift(rec);lsSet(K+'_my',my);
+  if(book){const t=lsGet(K+'_taken',[]);t.push(takenKey(new Date(day+'T00:00:00'),slot));lsSet(K+'_taken',t)}
+  if(CFG.sheets){try{fetch(CFG.sheets,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify({no,date:rec.date,item:s.n,name,phone,when:rec.when,note,level:lvl})})}catch(x){}}
+  const url=`https://wa.me/${CFG.wa}?text=${encodeURIComponent(text)}`;
+  $('#step2').innerHTML=`<div class="box done"><div style="font-size:2.4rem">${CFG.emoji}</div><h2 style="margin:6px 0">${book?'تم تثبيت طلب الحجز':'تم تسجيلك'}</h2><div class="no">${esc(no)}</div><p>احتفظي بالرقم. أرسلي الرسالة على واتساب ليتم التأكيد معك${book?' وتثبيت الموعد':''}.</p><div style="margin-top:12px"><a class="btn wa" href="${esc(url)}" target="_blank" rel="noopener">إرسال على واتساب</a></div></div>`;
+  sel=null;day=null;slot=null;drawList();drawMy();window.open(url,'_blank');
+}
+function drawMy(){
+  const my=lsGet(K+'_my',[]);
+  $('#my').innerHTML=my.length?`<h2>${book?'حجوزاتي':'تسجيلاتي'}</h2>`+my.map((r,i)=>`<div class="myi"><span><b>${esc(r.no)}</b> — ${esc(r.item)}${r.when?`<br><span class="det">${esc(r.when)}</span>`:''}</span><button class="btn g s" data-x="${i}">${book?'إلغاء':'حذف'}</button></div>`).join(''):'';
+}
+$('#my').onclick=e=>{const b=e.target.closest('[data-x]');if(!b)return;const my=lsGet(K+'_my',[]);const r=my.splice(+b.dataset.x,1)[0];lsSet(K+'_my',my);
+  if(book&&r.when){const [d,t]=r.when.split(' ');const tk=lsGet(K+'_taken',[]).filter(x=>x!==d+' '+t);lsSet(K+'_taken',tk)}drawMy();if(sel!==null)drawStep2()};
+drawList();drawMy();
+</script>
+</body>
+</html>
